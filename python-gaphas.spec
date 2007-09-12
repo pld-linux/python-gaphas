@@ -10,6 +10,8 @@ Source0:	http://pypi.python.org/packages/source/g/gaphas/%{module}-%{version}.ta
 URL:		http://gaphor.devjavu.com/projects/gaphor/wiki/Subprojects/Gaphas
 BuildRequires:	python-devel
 %pyrequires_eq	python-libs
+Requires:	python-pycairo >= 1.4.0
+Requires:	python-decorator >= 2.2.0
 Requires:	python-pygtk-gtk >= 2.8.4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
