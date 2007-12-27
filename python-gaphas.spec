@@ -1,12 +1,12 @@
 %define module gaphas
 Summary:	Cairo based canvas library
 Name:		python-%{module}
-Version:	0.3.3
-Release:	1
+Version:	0.3.4
+Release:	0.1
 License:	LGPL
 Group:		Python/Libraries
 Source0:	http://pypi.python.org/packages/source/g/gaphas/%{module}-%{version}.tar.gz
-# Source0-md5:	50ab5f156d7de7fb3c66b32fd07078c6
+# Source0-md5:	2ad173d2409936775a790902afa85c57
 URL:		http://gaphor.devjavu.com/projects/gaphor/wiki/Subprojects/Gaphas
 BuildRequires:	python-devel
 %pyrequires_eq	python-libs
@@ -40,7 +40,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc PKG-INFO
-%doc html/*
+%doc ChangeLog PKG-INFO README.txt state.txt undo.txt
 %{py_sitescriptdir}/%{module}
 %{py_sitescriptdir}/%{module}*egg*
