@@ -2,7 +2,7 @@
 Summary:	Cairo based canvas library
 Name:		python-%{module}
 Version:	0.3.5
-Release:	0.1
+Release:	1
 License:	LGPL
 Group:		Python/Libraries
 Source0:	http://pypi.python.org/packages/source/g/gaphas/%{module}-%{version}.tar.gz
