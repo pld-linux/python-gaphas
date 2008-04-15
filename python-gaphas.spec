@@ -1,5 +1,6 @@
 %define module gaphas
 Summary:	Cairo based canvas library
+Summary(pl.UTF-8):	Biblioteka płótna oparta na Cairo
 Name:		python-%{module}
 Version:	0.3.5
 Release:	1
@@ -9,15 +10,20 @@ Source0:	http://pypi.python.org/packages/source/g/gaphas/%{module}-%{version}.ta
 # Source0-md5:	c5eb17abfe2228ebbba65f5472954115
 URL:		http://gaphor.devjavu.com/projects/gaphor/wiki/Subprojects/Gaphas
 BuildRequires:	python-devel
+BuildRequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-libs
-Requires:	python-pycairo >= 1.4.0
 Requires:	python-decorator >= 2.2.0
-Requires:	python-pygtk-gtk >= 2.8.4
+Requires:	python-pycairo >= 1.4.0
+Requires:	python-pygtk-gtk >= 2:2.8.4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Cairo based canvas library.
+
+%description -l pl.UTF-8
+Biblioteka płótna oparta na Cairo.
 
 %prep
 %setup -q -n %{module}-%{version}
@@ -30,8 +36,8 @@ Cairo based canvas library.
 rm -rf $RPM_BUILD_ROOT
 
 %{__python} setup.py install \
-		--optimize=2 \
-		--root=$RPM_BUILD_ROOT
+	--optimize=2 \
+	--root=$RPM_BUILD_ROOT
 
 %py_postclean
 
@@ -41,5 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog PKG-INFO README.txt state.txt undo.txt
-%{py_sitescriptdir}/%{module}
-%{py_sitescriptdir}/%{module}*egg*
+%{py_sitescriptdir}/gaphas
+%{py_sitescriptdir}/gaphas*egg*
