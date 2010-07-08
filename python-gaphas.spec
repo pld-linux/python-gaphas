@@ -3,7 +3,7 @@ Summary:	Cairo based canvas library
 Summary(pl.UTF-8):	Biblioteka płótna oparta na Cairo
 Name:		python-%{module}
 Version:	0.3.6
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Python/Libraries
 Source0:	http://pypi.python.org/packages/source/g/gaphas/%{module}-%{version}.tar.gz
