@@ -11,7 +11,7 @@ Source0:	http://pypi.python.org/packages/source/g/gaphas/%{module}-%{version}.ta
 URL:		http://gaphor.devjavu.com/projects/gaphor/wiki/Subprojects/Gaphas
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %pyrequires_eq	python-libs
 Requires:	python-decorator >= 2.2.0
 Requires:	python-pycairo >= 1.4.0
